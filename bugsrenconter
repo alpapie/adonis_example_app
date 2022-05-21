@@ -1,0 +1,16 @@
+ probblem " - ER_INVALID_DEFAULT: Invalid default value for 'updated_at'
+    at Query.Sequence._packetToError
+    " 
+ solution:   set GLOBAL sql_mode = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+
+ probblem "Cannot read properties of undefined (reading 'has')"
+ 
+ solution : rendre les view avec { params,view }:HttpContextContract
+
+ probblem flashMessages.has('errors.${name}') not working
+
+   solution : use backticks `${name}`
+
+les route sont traiter par ordre donc les create avant les update de meme que dans le vue
+
